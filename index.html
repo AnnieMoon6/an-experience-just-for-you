@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Universe for Kaycee 💜</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Fondo universo -->
+
+<div id="universe"></div>
+
+
+
+<!-- Música -->
+
+<audio id="music" loop>
+
+    <source src="music/happybirthday.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+
+<section id="intro" class="screen">
+
+
+<div class="intro-content">
+
+
+<h2>
+✨ A Universe Made For You ✨
+</h2>
+
+
+
+<h1>
+
+Happy Birthday,<br>
+Kaycee 💜
+
+</h1>
+
+
+
+<p class="quote">
+
+Some people become memories.<br>
+
+Some become part of our universe.
+
+</p>
+
+
+
+
+<button id="startButton">
+
+✨ Begin the Journey ✨
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+     PASTEL
+========================= -->
+
+
+<section id="cake" class="screen hidden">
+
+
+<div class="cake-container">
+
+
+<h1 class="cake-title">
+
+Make a Wish...
+
+</h1>
+
+
+
+<p class="cake-text">
+
+Before you blow out the candle,
+I hope this new year brings you
+peace, happiness, strength,
+and countless beautiful memories.
+
+</p>
+
+
+
+
+<img
+
+src="images/cake.png"
+
+id="cakeImage"
+
+alt="Birthday Cake">
+
+
+
+
+<button id="cakeButton">
+
+🕯 Blow Out the Candle
+
+</button>
+
+
+
+
+<p id="birthdayMessage" class="hidden">
+
+💜 Happy Birthday, Kaycee! 💜
+
+</p>
+
+
+
+
+<button id="continueButton" class="hidden">
+
+Continue the Journey ✨
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     RECUERDOS
+========================= -->
+
+
+<section id="memories" class="screen hidden">
+
+
+
+<h1>
+
+✨ Constellation of Memories ✨
+
+</h1>
+
+
+
+
+<p class="quote">
+
+Every bright star hides a beautiful memory.
+Touch the glowing stars to discover them.
+
+</p>
+
+
+
+
+<div class="stars-map">
+
+
+
+
+
+<div class="memory-star"
+style="top:8%;left:15%;"
+data-image="images/photo1.jpg"
+data-text="Our first adventure together.">
+</div>
+
+
+
+
+<div class="memory-star"
+style="top:18%;left:75%;"
+data-image="images/photo2.jpg"
+data-text="One of my favorite memories.">
+</div>
+
+
+
+
+<div class="memory-star"
+style="top:38%;left:32%;"
+data-image="images/photo3.jpg"
+data-text="A moment I'll always treasure.">
+</div>
+
+
+
+
+<div class="memory-star"
+style="top:45%;left:82%;"
+data-image="images/photo4.jpg"
+data-text="I'll never forget this day.">
+</div>
+
+
+
+
+<div class="memory-star"
+style="top:62%;left:12%;"
+data-image="images/photo5.jpg"
+data-text="Every smile here means a lot to me.">
+</div>
+
+
+
+
+<div class="memory-star"
+style="top:72%;left:58%;"
+data-image="images/photo6.jpg"
+data-text="A memory I'll always carry with me.">
+</div>
+
+
+
+
+<div class="memory-star"
+style="top:84%;left:28%;"
+data-image="images/photo7.jpg"
+data-text="Thank you for this memory.">
+</div>
+
+
+
+
+
+<!-- OCTAVA ESTRELLA VIDEO -->
+
+<div class="memory-star"
+style="top:88%;left:82%;"
+data-video="videos/memory8.mp4"
+data-text="One of the happiest moments we shared.">
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<button id="memoriesNext">
+
+Continue ✨
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     POPUP RECUERDO
+========================= -->
+
+
+<div id="memoryPopup" class="hidden">
+
+
+<div class="popup-card">
+
+
+
+<img
+
+id="popupImage"
+
+src=""
+
+alt="Memory">
+
+
+
+
+
+<video
+
+id="popupVideo"
+
+class="hidden"
+
+controls>
+
+</video>
+
+
+
+
+
+<p id="popupText"></p>
+
+
+
+
+<button id="closePopup">
+
+Close
+
+</button>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- =========================
+     CARTA
+========================= -->
+
+
+<section id="letter" class="screen hidden">
+
+
+
+<h2>
+
+Your Birthday Letter 💜
+
+</h2>
+
+
+
+
+<div id="typingBox">
+
+</div>
+
+
+
+
+<button id="openEnding">
+
+Continue ✨
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+
+<section id="ending" class="screen hidden">
+
+
+<h2>
+
+Thank you for being part of my life.
+
+</h2>
+
+
+
+<p>
+
+With love
+
+<br><br>
+
+— Annie 💜
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>

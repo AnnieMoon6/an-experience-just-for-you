@@ -1,0 +1,2242 @@
+/* ===================================================
+   A Universe for Kaycee 💜
+   STYLE.CSS COMPLETO
+=================================================== */
+
+
+/* ==========================
+   Reset
+========================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+
+
+body{
+
+    overflow:hidden;
+
+    font-family:
+    Didot,
+    Georgia,
+    serif;
+
+    color:white;
+
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        #552080,
+        #13001d 75%
+    );
+
+}
+
+
+
+
+
+
+/* ==========================
+   Universo
+========================== */
+
+
+#universe{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    overflow:hidden;
+
+
+    pointer-events:none;
+
+
+    z-index:-1;
+
+
+}
+
+
+
+
+
+#universe::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+
+    background-image:
+
+
+    radial-gradient(
+        white 1px,
+        transparent 1px
+    );
+
+
+
+    background-size:
+
+    70px 70px;
+
+
+
+    opacity:.55;
+
+
+
+    animation:
+
+    starsMove 80s linear infinite;
+
+
+}
+
+
+
+
+
+@keyframes starsMove{
+
+
+    from{
+
+
+        transform:
+        translateY(0);
+
+
+    }
+
+
+
+    to{
+
+
+        transform:
+        translateY(-300px);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   Pantallas
+========================== */
+
+
+.screen{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+
+    display:flex;
+
+
+
+    flex-direction:column;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+    text-align:center;
+
+
+
+    padding:30px;
+
+
+
+    animation:
+
+    fadeScreen 1.3s ease;
+
+
+
+}
+
+
+
+
+
+.hidden{
+
+
+    display:none !important;
+
+
+}
+
+
+
+
+
+
+@keyframes fadeScreen{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:
+        scale(.95);
+
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:
+        scale(1);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   Texto general
+========================== */
+
+
+h1,
+h2{
+
+
+    text-shadow:
+
+
+    0 0 15px #e9c8ff,
+
+    0 0 35px #c77dff;
+
+
+
+}
+
+
+
+h1{
+
+
+    font-size:3rem;
+
+
+}
+
+
+
+h2{
+
+
+    font-size:2.5rem;
+
+
+}
+
+
+
+
+
+.quote{
+
+
+    max-width:700px;
+
+
+    margin:30px auto;
+
+
+    line-height:2;
+
+
+
+    font-size:1.2rem;
+
+
+    color:#f8edff;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   Botones
+========================== */
+
+
+button{
+
+
+    padding:
+
+    15px 35px;
+
+
+
+    border:none;
+
+
+
+    border-radius:40px;
+
+
+
+    cursor:pointer;
+
+
+
+    font-family:inherit;
+
+
+
+    font-size:1rem;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #d18aff,
+
+    #7627b8
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 0 20px
+
+    rgba(199,125,255,.8);
+
+
+
+    transition:.4s;
+
+
+
+}
+
+
+
+
+
+button:hover{
+
+
+    transform:
+
+    translateY(-5px)
+    scale(1.05);
+
+
+
+}
+/* ===================================================
+   PARTE 2 - Pastel, recuerdos y popup
+=================================================== */
+
+
+
+/* ==========================
+   Pastel
+========================== */
+
+
+.cake-container{
+
+
+    max-width:750px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+
+}
+
+
+
+
+.cake-title{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.cake-text{
+
+
+    max-width:650px;
+
+
+    line-height:2;
+
+
+    font-size:1.15rem;
+
+
+    color:#fff4ff;
+
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+#cakeImage{
+
+
+    width:280px;
+
+
+    max-width:80vw;
+
+
+
+    margin:25px;
+
+
+
+    filter:
+
+
+    drop-shadow(
+
+    0 0 25px #ffb8ff
+
+    );
+
+
+
+    animation:
+
+
+    cakeFloat 4s ease-in-out infinite;
+
+
+
+}
+
+
+
+
+
+@keyframes cakeFloat{
+
+
+    0%,
+    100%{
+
+
+        transform:
+        translateY(0);
+
+
+    }
+
+
+
+    50%{
+
+
+        transform:
+        translateY(-12px);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+#birthdayMessage{
+
+
+    margin:25px;
+
+
+    font-size:1.5rem;
+
+
+    color:#ffeaff;
+
+
+
+    text-shadow:
+
+
+    0 0 15px #d8a8ff;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   Mapa de recuerdos
+========================== */
+
+
+.stars-map{
+
+
+    position:relative;
+
+
+
+    width:90%;
+
+
+    max-width:1000px;
+
+
+
+    height:65vh;
+
+
+
+    margin:20px auto;
+
+
+
+}
+
+
+
+
+
+
+/* Estrellas de recuerdos */
+
+
+.memory-star{
+
+
+    position:absolute;
+
+
+
+    width:25px;
+
+
+    height:25px;
+
+
+
+    border-radius:50%;
+
+
+
+    background:white;
+
+
+
+    cursor:pointer;
+
+
+
+    box-shadow:
+
+
+    0 0 10px white,
+
+    0 0 25px #d8a8ff,
+
+    0 0 45px #9d4edd;
+
+
+
+    animation:
+
+
+    memoryPulse 2s infinite;
+
+
+
+    transition:.4s;
+
+
+
+}
+
+
+
+
+.memory-star:hover{
+
+
+    transform:
+
+
+    scale(1.7);
+
+
+
+}
+
+
+
+
+
+.memory-star.discovered{
+
+
+    background:#d8a8ff;
+
+
+
+    box-shadow:
+
+
+    0 0 20px white,
+
+    0 0 50px #c77dff;
+
+
+
+}
+
+
+
+
+
+
+@keyframes memoryPulse{
+
+
+    0%{
+
+
+        transform:
+        scale(1);
+
+
+
+    }
+
+
+
+    50%{
+
+
+        transform:
+        scale(1.35);
+
+
+
+    }
+
+
+
+    100%{
+
+
+        transform:
+        scale(1);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* Estrellas decorativas */
+
+.star{
+
+
+    position:absolute;
+
+
+    width:4px;
+
+
+    height:4px;
+
+
+
+    background:white;
+
+
+
+    border-radius:50%;
+
+
+
+    box-shadow:
+
+
+    0 0 10px white;
+
+
+
+    animation:
+
+
+    twinkle 3s infinite;
+
+
+
+}
+
+
+
+
+
+
+@keyframes twinkle{
+
+
+    0%,
+    100%{
+
+
+        opacity:.3;
+
+
+    }
+
+
+
+    50%{
+
+
+        opacity:1;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   Popup de recuerdos
+========================== */
+
+
+#memoryPopup{
+
+
+    position:fixed;
+
+
+
+    inset:0;
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+    background:
+
+
+    rgba(0,0,0,.65);
+
+
+
+    backdrop-filter:
+
+
+    blur(8px);
+
+
+
+    z-index:20;
+
+
+
+}
+
+
+
+
+
+.popup-card{
+
+
+    width:90%;
+
+
+    max-width:450px;
+
+
+
+    padding:30px;
+
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.12);
+
+
+
+    border:
+
+
+    1px solid
+
+    rgba(255,255,255,.25);
+
+
+
+    backdrop-filter:
+
+
+    blur(15px);
+
+
+
+    box-shadow:
+
+
+    0 0 40px
+
+    rgba(199,125,255,.4);
+
+
+
+}
+
+
+
+
+
+
+
+#popupImage,
+#popupVideo{
+
+
+    width:100%;
+
+
+
+    max-height:400px;
+
+
+
+    object-fit:cover;
+
+
+
+    border-radius:20px;
+
+
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+
+#popupText{
+
+
+    font-size:1.1rem;
+
+
+
+    line-height:1.8;
+
+
+
+    color:#fff5ff;
+
+
+
+    margin-bottom:20px;
+
+
+
+}
+/* ===================================================
+   PARTE 3 - Efectos especiales
+=================================================== */
+
+
+
+/* ==========================
+   Estrellas fugaces
+========================== */
+
+
+.shooting-star{
+
+
+    position:fixed;
+
+
+    width:220px;
+
+
+    height:4px;
+
+
+
+    border-radius:50px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(216,168,255,.4),
+
+        rgba(255,255,255,.9),
+
+        white
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 0 10px white,
+
+    0 0 25px #e9c8ff,
+
+    0 0 45px #c77dff;
+
+
+
+    transform:
+
+
+    rotate(-35deg);
+
+
+
+    pointer-events:none;
+
+
+
+    z-index:10;
+
+
+
+    animation:
+
+
+    shootingStarMove 2.5s linear forwards;
+
+
+
+}
+
+
+
+
+
+
+/* Cabeza luminosa */
+
+.shooting-star::after{
+
+
+    content:"";
+
+
+
+    position:absolute;
+
+
+
+    right:-6px;
+
+
+
+    top:50%;
+
+
+
+    width:14px;
+
+
+
+    height:14px;
+
+
+
+    transform:
+
+
+    translateY(-50%);
+
+
+
+    border-radius:50%;
+
+
+
+    background:white;
+
+
+
+    box-shadow:
+
+
+    0 0 15px white,
+
+    0 0 35px #ffffff,
+
+    0 0 60px #d8a8ff;
+
+
+
+}
+
+
+
+
+
+
+/* Brillo de la cola */
+
+.shooting-star::before{
+
+
+    content:"";
+
+
+
+    position:absolute;
+
+
+
+    left:0;
+
+
+
+    top:50%;
+
+
+
+    width:100%;
+
+
+
+    height:100%;
+
+
+
+    transform:
+
+
+    translateY(-50%);
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(199,125,255,.6)
+
+    );
+
+
+
+    filter:
+
+
+    blur(4px);
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes shootingStarMove{
+
+
+    0%{
+
+
+        opacity:0;
+
+
+
+        transform:
+
+
+        translate(-200px,-120px)
+
+        rotate(-35deg)
+
+        scale(.5);
+
+
+
+    }
+
+
+
+
+    20%{
+
+
+        opacity:1;
+
+
+
+    }
+
+
+
+
+    100%{
+
+
+        opacity:0;
+
+
+
+        transform:
+
+
+        translate(950px,500px)
+
+        rotate(-35deg)
+
+        scale(1);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   Partículas del último recuerdo
+========================== */
+
+
+.sparkle{
+
+
+    position:fixed;
+
+
+
+    color:white;
+
+
+
+    font-size:22px;
+
+
+
+    pointer-events:none;
+
+
+
+    z-index:30;
+
+
+
+    text-shadow:
+
+
+    0 0 15px white,
+
+    0 0 30px #d8a8ff;
+
+
+
+    animation:
+
+
+    sparkleMove 2.5s forwards;
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes sparkleMove{
+
+
+    0%{
+
+
+        opacity:1;
+
+
+
+        transform:
+
+
+        scale(.5);
+
+
+
+    }
+
+
+
+
+    100%{
+
+
+        opacity:0;
+
+
+
+        transform:
+
+
+        translateY(-200px)
+
+        scale(2);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   Flash de la vela
+========================== */
+
+
+.candle-flash{
+
+
+    position:fixed;
+
+
+
+    inset:0;
+
+
+
+    background:white;
+
+
+
+    opacity:0;
+
+
+
+    pointer-events:none;
+
+
+
+    z-index:50;
+
+
+
+}
+
+
+
+
+
+
+
+.candle-flash.active{
+
+
+    animation:
+
+
+    candleFlashAnimation .8s ease;
+
+
+
+}
+
+
+
+
+
+
+@keyframes candleFlashAnimation{
+
+
+    0%{
+
+
+        opacity:0;
+
+
+
+    }
+
+
+
+    30%{
+
+
+        opacity:.95;
+
+
+
+    }
+
+
+
+    100%{
+
+
+        opacity:0;
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   Corazones flotantes
+========================== */
+
+
+.heart{
+
+
+    position:fixed;
+
+
+
+    bottom:-30px;
+
+
+
+    font-size:22px;
+
+
+
+    pointer-events:none;
+
+
+
+    z-index:5;
+
+
+
+    animation:
+
+
+    heartMove 8s linear forwards;
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes heartMove{
+
+
+    0%{
+
+
+        opacity:1;
+
+
+
+        transform:
+
+
+        translateY(0)
+
+        scale(1);
+
+
+
+    }
+
+
+
+    100%{
+
+
+        opacity:0;
+
+
+
+        transform:
+
+
+        translateY(-110vh)
+
+        scale(1.8);
+
+
+
+    }
+
+
+}
+/* ===================================================
+   PARTE 4 - Carta, final y responsive
+=================================================== */
+
+
+
+/* ==========================
+   Carta
+========================== */
+
+
+#letter{
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+}
+
+
+
+
+
+#letter h2{
+
+
+    margin-bottom:35px;
+
+
+
+    font-size:2.6rem;
+
+
+
+    text-shadow:
+
+
+    0 0 15px #e9c8ff,
+
+    0 0 35px #c77dff;
+
+
+
+}
+
+
+
+
+
+
+#typingBox{
+
+
+    width:900px;
+
+
+
+    max-width:92vw;
+
+
+
+    height:65vh;
+
+
+
+    overflow-y:auto;
+
+
+
+    padding:35px;
+
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    border:
+
+
+    1px solid
+
+    rgba(255,255,255,.18);
+
+
+
+    backdrop-filter:
+
+
+    blur(15px);
+
+
+
+    text-align:left;
+
+
+
+    line-height:2;
+
+
+
+    font-size:1.1rem;
+
+
+
+    color:#fff8ff;
+
+
+
+    box-shadow:
+
+
+    0 0 35px
+
+    rgba(199,125,255,.35);
+
+
+
+}
+
+
+
+
+
+/* Barra de scroll de la carta */
+
+
+#typingBox::-webkit-scrollbar{
+
+
+    width:8px;
+
+
+}
+
+
+
+#typingBox::-webkit-scrollbar-thumb{
+
+
+    background:
+
+
+    #c77dff;
+
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/* Cursor de escritura */
+
+
+.cursor{
+
+
+    display:inline-block;
+
+
+
+    width:3px;
+
+
+
+    height:22px;
+
+
+
+    margin-left:5px;
+
+
+
+    background:white;
+
+
+
+    box-shadow:
+
+
+    0 0 10px white,
+
+    0 0 25px #d8a8ff;
+
+
+
+    animation:
+
+
+    cursorBlink .8s infinite;
+
+
+
+}
+
+
+
+
+
+@keyframes cursorBlink{
+
+
+    0%,
+    100%{
+
+
+        opacity:1;
+
+
+    }
+
+
+
+    50%{
+
+
+        opacity:0;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   Pantalla final
+========================== */
+
+
+#ending{
+
+
+    animation:
+
+
+    finalFade 2s ease;
+
+
+
+}
+
+
+
+
+
+
+#ending h2{
+
+
+    max-width:900px;
+
+
+
+    font-size:3rem;
+
+
+
+    font-weight:300;
+
+
+
+    margin-bottom:40px;
+
+
+
+    text-shadow:
+
+
+    0 0 20px #f4e4ff,
+
+    0 0 45px #d8a8ff;
+
+
+
+}
+
+
+
+
+
+
+#ending p{
+
+
+    font-size:1.5rem;
+
+
+
+    line-height:2.2;
+
+
+
+    color:#ffefff;
+
+
+
+}
+
+
+
+
+
+#ending p::after{
+
+
+    content:" 💜";
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes finalFade{
+
+
+    from{
+
+
+        opacity:0;
+
+
+
+        transform:
+
+
+        scale(.9);
+
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+
+        transform:
+
+
+        scale(1);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* Estrellas decorativas del final */
+
+
+#ending::before{
+
+
+    content:"✦";
+
+
+
+    position:absolute;
+
+
+
+    left:18%;
+
+
+
+    top:25%;
+
+
+
+    font-size:30px;
+
+
+
+    color:white;
+
+
+
+    animation:
+
+
+    twinkle 3s infinite;
+
+
+
+}
+
+
+
+
+
+
+#ending::after{
+
+
+    content:"✦";
+
+
+
+    position:absolute;
+
+
+
+    right:18%;
+
+
+
+    bottom:25%;
+
+
+
+    font-size:24px;
+
+
+
+    color:white;
+
+
+
+    animation:
+
+
+    twinkle 4s infinite;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   Responsive móvil
+========================== */
+
+
+@media(max-width:700px){
+
+
+
+    h1{
+
+
+        font-size:2.2rem;
+
+
+    }
+
+
+
+    h2{
+
+
+        font-size:2rem;
+
+
+    }
+
+
+
+
+    .quote{
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+
+    button{
+
+
+        padding:
+
+
+        13px 25px;
+
+
+
+        font-size:.95rem;
+
+
+    }
+
+
+
+
+
+    #cakeImage{
+
+
+        width:210px;
+
+
+    }
+
+
+
+
+
+    .stars-map{
+
+
+        width:100%;
+
+
+        height:60vh;
+
+
+    }
+
+
+
+
+
+    .memory-star{
+
+
+        width:20px;
+
+
+        height:20px;
+
+
+    }
+
+
+
+
+
+    #typingBox{
+
+
+        width:95%;
+
+
+
+        height:60vh;
+
+
+
+        padding:22px;
+
+
+
+        font-size:1rem;
+
+
+
+    }
+
+
+
+
+
+    #letter h2{
+
+
+        font-size:2rem;
+
+
+    }
+
+
+
+
+
+    #ending h2{
+
+
+        font-size:2.2rem;
+
+
+    }
+
+
+
+
+
+    #ending p{
+
+
+        font-size:1.15rem;
+
+
+    }
+
+
+
+
+    .shooting-star{
+
+
+        width:150px;
+
+
+    }
+
+
+
+}
+#popupVideo.hidden,
+#popupImage.hidden{
+
+    display:none !important;
+
+}
